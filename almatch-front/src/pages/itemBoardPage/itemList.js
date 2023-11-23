@@ -1,0 +1,1 @@
+//pages/itemList.js(오픈마켓 food 리스트)
