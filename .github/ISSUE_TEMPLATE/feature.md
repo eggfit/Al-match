@@ -1,5 +1,5 @@
 ---
-name: 'Issue: Feature'
+name: Feature
 about: 'Suggest your issue about features for this project '
 title: ''
 labels: ''
