@@ -1,6 +1,6 @@
 import { handleActions } from 'redux-actions';
 // produce import
-import produce from 'immer';
+import { produce } from 'immer';
 // takeLatest import
 // saga import
 // import { createRequestActionTypes } from '../lib/createRequestSaga';
@@ -37,7 +37,6 @@ const initialState = {
 };
 
 const auth = handleActions(
-
     {
         [CHANGE_FIELD]: (state, { payload: { form, key, value } }) =>
           // 불변성 유지를 위한 immer 
