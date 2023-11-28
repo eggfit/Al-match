@@ -2,7 +2,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Main from '../src/pages/mainPage/main';
-import Login from '../src/pages/userPage/login';
+import SignIn from '../src/pages/RegPage';
+import Login from '../src/pages/LoginPage';
 import MyPage from '../src/pages/myPage/myPage';
 import Cart from '../src/pages/cartPage/cart';
 import ItemBoard from '../src/pages/itemBoardPage/itemList';
@@ -12,8 +13,8 @@ const Router = () => {
     return (
         <BrowserRouter>
             <Routes>
-                {/* <Route path="/" element={<SignIn />} /> */}
-                <Route path="/signUp" element={<Login />} />
+                <Route path="/" element={<SignIn />} />
+                <Route path="/login" element={<Login />} />
                 <Route path="/main" element={<Main />} />
                 <Route path="/itemBoard" element={<ItemBoard />} />
                 <Route path="/itemBoard/:foodId" element={<ItemDetail />} />

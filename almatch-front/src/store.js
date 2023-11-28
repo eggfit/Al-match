@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import reducers from './reducers';
+import authReducer from './reducers/auth';
 import logger from 'redux-logger';
 
 const store = configureStore({
-    reducer: reducers,
+    reducer: authReducer,
     middleware: getDefaultMiddleware =>
         getDefaultMiddleware({ serializableCheck: false }).concat(logger),
     devTools: false,
