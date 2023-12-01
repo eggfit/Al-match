@@ -1,12 +1,11 @@
-import client from "./client";
+// import client from "./client";
+// import axios from "axios";
+// const BASE_URL = 'http://localhost:3001';
 
-// 로그인
-export const login = ({username, userId, password}) => 
-    client.post('/api/auth/login', {username, userId, password});
-
-// 회원가입
-export const register = ({username, userId, password}) => 
-    client.post('/api/auth/register',{username, userId, password});
-
-// 로그인 상태 확인
-// export const check = () => client.get('/api/auth/');
+// export const getLoginAPI = async ({username, userId, email, password}) => {
+//     try{
+//         const res = await axios.get(`${BASE_URL}/auth/login`);
+//     } catch (errer){
+//         console.log('fetch error loginAPI');
+//     }
+// };

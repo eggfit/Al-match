@@ -1,15 +1,12 @@
 //rootSaga 생성
-
 import { combineReducers } from "redux";
 import { all } from 'redux-saga/effects'
-import auth, { authSaga } from "./auth";
-// loading import
-import loading from "./loading";
+import authSaga from "./auth_tmp";
+import * as auth from '../actions/index';
 
 // loading add
 const rootReducer = combineReducers({
-    auth,
-    loading ,
+    auth
 });
 
 export function* rootSaga(){

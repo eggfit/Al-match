@@ -28,15 +28,9 @@ const RegisterForm = () => {
     // 사가에 대한 API 요청 처리후, 이에 대한 결과를 auth/authError 통해 조회
     const onSubmit = e => {
         e.preventDefault();
-        const { username, userId, password, passwordConfirm } = form;
+        const { email, password } = form;
         console.log(e);
-        
-        
-        if (password !== passwordConfirm){
-            console.log('password error :(')
-            return ; 
-        }
-        dispatch(register({ username, userId, password }));
+        dispatch(register({ email, password }));
     };
 
 

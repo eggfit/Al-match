@@ -41,7 +41,6 @@ const Footer = styled.div`
             color:1px solid grey
         }
     }
-
 `
 
 const textMap = {
@@ -65,8 +64,6 @@ const AuthForm = ({type }) => {
                 name="password" 
                 placeholder="password" 
                 type="password"
-                
-                
                 />
                 <ButtonSignInUp fullWidth>{text}</ButtonSignInUp>
             </form>
