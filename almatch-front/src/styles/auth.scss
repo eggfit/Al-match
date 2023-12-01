@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard.woff') format('woff');
+    font-style: normal;
+}
+
+.AuthTemplate{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    right:0;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    .Box{
+        .logo-area {
+            font-family: 'Pretendard';
+            display: block;
+            padding-bottom: 2rem;
+            text-align: center;
+            letter-spacing: 2px;
+            .logo{
+                height: 50px;
+                width: 80px;
+            }
+            // h3{
+            //     margin-top: 5px;
+            //     font-size: 18px;
+            //     font-weight: 500;
+            //     color: #D0DE41;
+            // }
+        }
+          width: 360px;
+          background: white;
+    }
+};

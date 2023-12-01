@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-// import Button from '../common/Button';
+import Button from '../common/Button';
+import '../../styles/common.scss';
 
 const AuthFormBlock = styled.div`
     h3{
@@ -11,32 +12,31 @@ const AuthFormBlock = styled.div`
     }
 `;
 
-// button margin
-// const ButtonWithMarinTop = styled(Button)`
-// margin-top: 1rem;
-
+const ButtonSignInUp = styled(Button)`
+margin-top: 1rem;`
 
 const StyledInput = styled.input`
+    font-family: Pretendard-Regular;
+    background-color: rgb(236, 236, 236);
     font-size:1rem;
     border:none;
-    border-bottom: 1px solid grey;
-    padding-bottom: 0.5rem;
+    border-radius: 4px;
+    padding-bottom: 0.6rem;
+    padding-top: 0.6rem;
     outline: none;
     width: 100%;
-    &:focus{
-        color: $oc-teal-7;
-        border-bottom:1px solid grey ;
-    }
+    -webkit-appearance: none;
     &+&{
         margin-top: 1rem;
     }
 `
 const Footer = styled.div`
-    margin-top:2rem;
+    font-family: Pretendard-Regular;
+    margin-top: 2rem;
     text-align : right;
     a {
-        color : 1px solid grey;
-        text-decoration:underline;
+        color: inherit;
+        text-decoration: none;
         &:hover{
             color:1px solid grey
         }
@@ -45,41 +45,36 @@ const Footer = styled.div`
 `
 
 const textMap = {
-    login:'로그인',
-    register : '회원가입'
+    login:'Sign In',
+    register: 'Sign Up'
 }
 
 const AuthForm = ({type }) => {
     const text = textMap[type];
     return (
         <AuthFormBlock>
-            <h3>{text}</h3>
             <form>
                 <StyledInput 
                 autoComplete="username" 
                 name="username" 
-                placeholder="아이디"
+                placeholder="Email"
                 
                  />
                 <StyledInput 
-                autoComplete="current-password" 
+                autoComplete="password" 
                 name="password" 
-                placeholder="비밀번호" 
+                placeholder="password" 
                 type="password"
                 
                 
                 />
-                {type === 'register' &&(
-                         <StyledInput autoComplete="new-password" name="passwordConfirm" placeholder="비밀번호 확인" type="password" />
-                    )
-                }
-                {/* <ButtonWithMarinTop fullWidth>{text}</ButtonWithMarinTop> */}
+                <ButtonSignInUp fullWidth>{text}</ButtonSignInUp>
             </form>
             <Footer>
                 {type === 'login' ? (
-                    <Link to="/register">회원가입</Link>
+                    <Link to="/">Sign Up</Link>
                 ):(
-                    <Link to="/login">로그인</Link>
+                    <Link to="/login">Sign In</Link>
                 )
                 }
                

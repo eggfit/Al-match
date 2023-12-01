@@ -1,48 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-
-const AuthTemplate = styled.div`
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  right:0;
-  background : #grey;
-  display: flex;
-  flex-direction:column;
-  justify-content: center;
-  align-items: center;
-`;
-
-
-const WhiteBox = styled.div`
-  .logo-area {
-    display: block;
-    padding-bottom: 2rem;
-    text-align:center;
-    font-weight: bold;
-    letter-spacing:2px;
-  }
-  box-shadow: 0 0 8px rgba(0,0,0,0.025);
-  padding: 2rem;
-  width: 360px;
-  background: white;
-  border-radius: 2px;
-`
+import Logo from '../../assets/images/al-match-logo.png';
+import '../../styles/auth.scss';
 
 const AuthBox= ({children}) => {
   return (
-  <AuthTemplate >
-    <WhiteBox>
+  <div className='AuthTemplate'>
+    <div className='Box'>
       <div className="logo-area">
-    <Link to='/'>Al-match</Link>
-    </div>
-    {children}
-    </WhiteBox>
-    </AuthTemplate >
-    
+      <Link to='/'> 
+        <img src={Logo} alt="logo" className="logo" /> 
+        </Link>
+        {/* <h3>내 알레르기에 맞추다</h3> */}
+      </div>
+      {children}
+      </div>
+    </div >
     )
     ;
 
